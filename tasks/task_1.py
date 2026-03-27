@@ -34,18 +34,3 @@ for url in urls:
         code = "—"
     
     print(f"{url:<40} {status:<20} {code:<10}")
-    
-urls = [
-    "https://github.com/",
-    "https://www.binance.com/en",
-    "https://tomtit.tomsk.ru/",
-    "https://jsonplaceholder.typicode.com/",
-    "https://moodle.tomtit-tomsk.ru/"
-]
-
-print(f"{'URL':<40} {'Статус':<20} {'Код ответа':<10}")
-
-for url in urls:
-    try:
-        response = requests.get(url, timeout=10)
-        code = response.status_code
